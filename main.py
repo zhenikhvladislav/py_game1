@@ -16,7 +16,7 @@ def draw(screen):
     screen.blit(text, (text_x, text_y))
     pygame.draw.rect(screen, (0, 255, 0),
                 (text_x - 10, text_y - 10,
-                 text_w + 10, text_h + 10))
+                 text_w + 10, text_h + 10), 1)
 
 
 if __name__ == '__main__':
