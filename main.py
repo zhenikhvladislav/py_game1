@@ -1,5 +1,6 @@
 # Документация: python -m pygame.docs
 
+import random
 import pygame
 
 
@@ -19,12 +20,21 @@ def draw(screen):
                  text_w + 10, text_h + 10), 1)
 
 
+def draw2(screen):
+    for i in range(1000):
+        screen.fill(pygame.Color('white'),
+                    (random.random() * width,
+                     random.random() * height, 10, 2))
+
+
 if __name__ == '__main__':
     pygame.init()
     size = width, height = 800, 600
     screen = pygame.display.set_mode(size)
 
     draw(screen)
+
+    #draw2(screen)
 
     # Смена кадров (обновление экрана)
     pygame.display.flip()
